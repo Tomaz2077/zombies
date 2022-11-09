@@ -14,8 +14,12 @@ public class Main {
     private static Human human = new Human(10, 10);
     private static Zombie zombie = new Zombie(30, 50, human);
     public static void main(String[] args) throws IOException, InterruptedException {
-        DefaultTerminalFactory d = new DefaultTerminalFactory();
-        Terminal t = d.createTerminal();
+        d = new DefaultTerminalFactory();
+        t = d.createTerminal();
+        int[] pos = startp();
+
+        human = new Human(pos[1], pos[0]);
+        zombie= new Zombie(30, 50, human);
 
         getHighscore();
         plotWelcomeScreen();
@@ -53,8 +57,7 @@ public class Main {
                     //human wins
                     break main;
                 case 2:
-                    System.out.println("Zombie wins!");
-                    //zombie wins
+                    plotWelcomeScreen();
                     break main;
             }
 
@@ -69,6 +72,34 @@ public class Main {
 
         }
         t.close();
+    }
+
+    public static KeyType getKeyTypeInput() throws InterruptedException, IOException {
+        keyStroke = null;
+        do {
+            Thread.sleep(5);
+            keyStroke = t.pollInput();
+        } while (keyStroke == null);
+        return keyStroke.getKeyType();
+    }
+
+    public static void plot() throws IOException {
+        t.clearScreen();
+
+        t.setCursorPosition(human.getY(), human.getX());
+        t.setForegroundColor(human.getTextColor());
+        t.putString(human.getSymbol());
+
+        t.setCursorPosition(zombie.getY(), zombie.getX());
+        t.setForegroundColor(zombie.getTextColor());
+        t.putString(zombie.getSymbol());
+
+        t.setCursorPosition(0, 0);
+        t.setForegroundColor(TextColor.ANSI.GREEN);
+        t.putString(human.getScore() > highscore ? "Highscore: " + human.getScore() : "Score: " + human.getScore());
+
+        t.flush();
+
     }
 
     public static int determineWinner() {

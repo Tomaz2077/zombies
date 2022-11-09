@@ -11,6 +11,8 @@ public class Zombie {
 
     private final char symbol = '@';
     private Human human;
+    private final String symbol ="\uD83D\uDC80";
+
 
     public Zombie(int x, int y, Human human) {
 
@@ -86,7 +88,7 @@ public class Zombie {
         }
     }
 
-    public char getSymbol() {
+    public String getSymbol() {
         return symbol;
 
     }
