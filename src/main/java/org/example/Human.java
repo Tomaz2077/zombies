@@ -5,19 +5,20 @@ import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.input.KeyType;
 
 public class Human {
+    private TextColor textColor=TextColor.ANSI.YELLOW;
     private int x;
     private int y;
+    private int score;
+    private final String symbol = "\uD83E\uDD37\u200D\u200D";
 
-
-    private final char symbol='X';
-
-    public Human(int x, int y){
-        this.x=x;
-        this.y=y;
-
+    public Human(int x, int y) {
+        this.x = x;
+        this.y = y;
+        this.score = 0;
 
     }
-    public void move(KeyType keyType){
+
+    public void move(KeyType keyType) {
 //        if(keyType==null){
 //            return;
 //        }
@@ -36,13 +37,29 @@ public class Human {
         }
 
     }
-    public int getX(){
+
+    public int getX() {
         return x;
     }
-    public int getY(){
+
+    public int getY() {
         return y;
     }
-    public char getSymbol(){
+
+    public String getSymbol() {
         return symbol;
+    }
+
+    public int getScore() {
+        return score;
+    }
+
+    public void incrementScore() {
+        score++;
+
+    }
+
+    public TextColor getTextColor(){
+        return textColor;
     }
 }
