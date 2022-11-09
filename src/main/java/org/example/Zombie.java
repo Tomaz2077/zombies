@@ -1,8 +1,11 @@
 package org.example;
 
+import com.googlecode.lanterna.TextColor;
+
 public class Zombie {
 
     private int x;
+    private TextColor textColor = TextColor.ANSI.DEFAULT;
 
     private int y;
 
@@ -38,44 +41,58 @@ public class Zombie {
         int humanX = human.getX();
         int humanY = human.getY();
         double random = Math.random();
+        double randomBadMoves = 0.1; //prosenter 10%
+        if (random > randomBadMoves) {
+            mover(humanX, humanY, 1);
+        } else {
+            mover(humanX, humanY, -1);
+        }
 
+    }
+
+    private void mover(int humanX, int humanY, int k) {
+
+        double random = Math.random();
         if (random < 0.4) {
 
             if (humanX < x) {
-                x--;
+                x = x - k;
             } else if (humanX > x) {
-                x++;
+                x = x + k;
             }
         } else if ((random < 0.8)) {
 
             if (humanY < y) {
-                y--;
+                y = y - k;
 
             } else if (humanY > y) {
-                y++;
+                y = y + k;
 
             }
-        }else {
+        } else {
 
             if (humanY < y) {
-                y--;
+                y = y - k;
 
             } else if (humanY > y) {
-                y++;
+                y = y + k;
 
             }
             if (humanX < x) {
-                x--;
+                x = x - k;
             } else if (humanX > x) {
-                x++;
+                x = x + k;
             }
         }
-
     }
 
     public char getSymbol() {
         return symbol;
 
+    }
+
+    public TextColor getTextColor() {
+        return textColor;
     }
 
 }

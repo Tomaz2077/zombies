@@ -1,5 +1,7 @@
 package org.example;
 
+import com.googlecode.lanterna.TerminalSize;
+import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
@@ -14,6 +16,10 @@ public class Main {
     public static void main(String[] args) throws IOException, InterruptedException {
         DefaultTerminalFactory d = new DefaultTerminalFactory();
         Terminal t = d.createTerminal();
+
+        getHighscore();
+        plotWelcomeScreen();
+        plot();
 
         main:
         while (true) {
@@ -67,6 +73,7 @@ public class Main {
 
     public static int determineWinner() {
         if (zombie.getX() == human.getX() && zombie.getY() == human.getY()) {
+            System.out.println("donzo");
             return 2;
         } else return 0;
         //there is no way for human to win at this point
