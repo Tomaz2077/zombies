@@ -13,9 +13,7 @@ import java.io.IOException;
 import java.io.PrintStream;
 import java.util.Scanner;
 
-
 public class Main {
-
 
     private static int[] startp() {
         TerminalSize tz;
@@ -31,13 +29,16 @@ public class Main {
         return pos;
     }
 
+
+
     private static Human human;
     private static Zombie zombie;
     private static int highscore;
     private static KeyStroke keyStroke;
-
     private static DefaultTerminalFactory d;
     private static Terminal t;
+
+
 
     public static void main(String[] args) throws IOException, InterruptedException {
         d = new DefaultTerminalFactory();
@@ -47,10 +48,11 @@ public class Main {
         human = new Human(pos[1], pos[0]);
         zombie= new Zombie(30, 50, human);
 
-        getHighscore();
+        getHighscore(); //highscore loaded from highscore.txt
         plotWelcomeScreen();
         plot();
 
+        //starts our main game loop, stops only when break'ed
         mainloop:
         while (true) {
 
@@ -74,23 +76,18 @@ public class Main {
                     //human wins
                     break mainloop;
                 case 2:
+                    setHighscore(); //checks if highscore and stores it in highscore.txt
+                    plotEndScreen();
                     break mainloop;
             }
 
         }
-        plotEndScreen();
+
         t.close();
-        setHighscore();
+
     }
 
-    public static KeyType getKeyTypeInput() throws InterruptedException, IOException {
-        keyStroke = null;
-        do {
-            Thread.sleep(5);
-            keyStroke = t.pollInput();
-        } while (keyStroke == null);
-        return keyStroke.getKeyType();
-    }
+
 
     public static void plot() throws IOException {
         t.clearScreen();
@@ -110,15 +107,20 @@ public class Main {
         t.flush();
 
     }
-
+    public static KeyType getKeyTypeInput() throws InterruptedException, IOException {
+        keyStroke = null;
+        do {
+            Thread.sleep(5);
+            keyStroke = t.pollInput();
+        } while (keyStroke == null);
+        return keyStroke.getKeyType();
+    }
     public static int determineWinner() {
         if (zombie.getX() == human.getX() && zombie.getY() == human.getY()) {
-            System.out.println("donzo");
             return 2;
         } else return 0;
-        //there is no way for human to win at this point
+        //there is no way for humans to win against zombies
     }
-
     public static void getHighscore() {
         File file;
         Scanner sc;
@@ -130,10 +132,8 @@ public class Main {
             throw new RuntimeException(e);
         }
         highscore = sc.nextInt();
-        System.out.println(highscore);
 
     }
-
     public static void setHighscore() {
 
         if (human.getScore() > highscore) {
@@ -150,7 +150,6 @@ public class Main {
 
 
     }
-
     public static void plotWelcomeScreen() throws IOException, InterruptedException {
         KeyType kt;
         TerminalSize ts = t.getTerminalSize();
@@ -161,40 +160,25 @@ public class Main {
             t.setCursorPosition(ts.getColumns() / 2, ts.getRows() / 2);
             t.putString("Welcome to Zombies");
 
-
             kt = getKeyTypeInput();
         } while (!kt.equals(KeyType.Enter));
         t.flush();
 
     }
-
     public static void plotEndScreen() throws IOException, InterruptedException {
-
         KeyType kt;
         TerminalSize ts = t.getTerminalSize();
-
         t.clearScreen();
-        t.setCursorPosition(0, 1);
-
-
-        /*if (kt.equals(KeyType.Escape)) {
-            System.out.println("Game will now close! ByeBye sore loser!");
-        }
-        String str = "Press escape to quit game";
-        System.out.println(str);*/
-
-
-      /*  do {
-            String str ="Press escape to quit game";
+        do {
             t.setCursorPosition(1, 1);
-            t.putString(str);
+            t.putString("Press escape to quit game");
+            t.setCursorPosition(ts.getColumns() / 2 - 15, ts.getRows() / 2);
+            t.putString("Game will now close! ByeBye sore loser!");
+            t.flush();
 
             kt = getKeyTypeInput();
-        } while (!kt.equals(KeyType.Escape));*/
-        t.setCursorPosition(0, 1);
-        t.putString("Game will now close! ByeBye sore loser!");
+        } while (!kt.equals(KeyType.Enter));
 
-        t.flush();
 
     }
 }

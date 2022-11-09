@@ -5,7 +5,7 @@ import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.input.KeyType;
 
 public class Human {
-    private TextColor textColor=TextColor.ANSI.YELLOW;
+    private TextColor textColor = TextColor.ANSI.YELLOW;
     private int x;
     private int y;
     private int score;
@@ -15,51 +15,51 @@ public class Human {
         this.x = x;
         this.y = y;
         this.score = 0;
-
     }
 
-    public void move(KeyType keyType) {
+
+        public void move (KeyType keyType){
 //        if(keyType==null){
 //            return;
 //        }
 
-        if (keyType.equals(KeyType.ArrowUp)) {
-            x--;
+            if (keyType.equals(KeyType.ArrowUp)) {
+                x--;
+            }
+            if (keyType.equals(KeyType.ArrowDown)) {
+                x++;
+            }
+            if (keyType.equals(KeyType.ArrowLeft)) {
+                y--;
+            }
+            if (keyType.equals(KeyType.ArrowRight)) {
+                y++;
+            }
+
         }
-        if (keyType.equals(KeyType.ArrowDown)) {
-            x++;
-        }
-        if (keyType.equals(KeyType.ArrowLeft)) {
-            y--;
-        }
-        if (keyType.equals(KeyType.ArrowRight)) {
-            y++;
+
+        public int getX () {
+            return x;
         }
 
-    }
+        public int getY () {
+            return y;
+        }
 
-    public int getX() {
-        return x;
-    }
+        public String getSymbol () {
+            return symbol;
+        }
 
-    public int getY() {
-        return y;
-    }
+        public int getScore () {
+            return score;
+        }
 
-    public String getSymbol() {
-        return symbol;
-    }
+        public void incrementScore () {
+            score++;
+        }
 
-    public int getScore() {
-        return score;
-    }
+        public TextColor getTextColor () {
+            return textColor;
+        }
 
-    public void incrementScore() {
-        score++;
-
-    }
-
-    public TextColor getTextColor(){
-        return textColor;
-    }
 }
