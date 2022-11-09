@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10bff2da-c5d1-40a3-a400-69b15f58caf5" name="Changes" comment="Version 1. Randomous zombie">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/example/highscore.txt" afterDir="false" />
+    <list default="true" id="10bff2da-c5d1-40a3-a400-69b15f58caf5" name="Changes" comment="CHANGES: Emoji chars, Highscore, Welcome and end screen, color, fix start points.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Zombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Zombie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,6 +17,13 @@
       <list>
         <option value="Class" />
       </list>
+    </option>
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="NO_COMMIT" />
+      </set>
     </option>
   </component>
   <component name="Git.Settings">
@@ -42,17 +45,17 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tomaz/Documents/lanterna&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/Tomaz/Documents",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0"
   }
-}</component>
+}]]></component>
   <component name="RunManager">
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.example.Main" />
@@ -93,7 +96,7 @@
       <option name="presentableId" value="Default" />
       <updated>1667898653442</updated>
       <workItem from="1667898655686" duration="2497000" />
-      <workItem from="1667901874882" duration="31864000" />
+      <workItem from="1667901874882" duration="39156000" />
     </task>
     <task id="LOCAL−00001" summary="Initial">
       <created>1667915540790</created>
@@ -119,7 +122,19 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1668004570253</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Changes by ArnarSmari">
+      <created>1668008830478</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1668008830478</updated>
+    </task>
+    <task id="LOCAL−00006" summary="CHANGES: Emoji chars, Highscore, Welcome and end screen, color, fix start points.">
+      <created>1668020141506</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1668020141506</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -128,19 +143,40 @@
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
+        <entry key="526fe9c8-6cb6-40b2-a2ed-f771d8b626b6">
+          <value>
+            <State />
+          </value>
+        </entry>
         <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="a4e05413-049d-4926-b76d-47cdcff6900f">
+          <value>
+            <State />
+          </value>
+        </entry>
+        <entry key="a56d9add-e8e5-4e76-b805-40a272ccca4d">
           <value>
             <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="OPEN_GENERIC_TABS">
+      <map>
+        <entry key="526fe9c8-6cb6-40b2-a2ed-f771d8b626b6" value="TOOL_WINDOW" />
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial" />
-    <MESSAGE value="Version 1. Randomous zombie" />
     <MESSAGE value="Changes by daniel" />
+    <MESSAGE value="Version 1. Randomous zombie" />
     <MESSAGE value="Changes by ArnarSmari" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by ArnarSmari" />
+    <MESSAGE value="CHANGES: Emoji chars, Highscore, Welcome and end screen, color, fix start points." />
+    <option name="LAST_COMMIT_MESSAGE" value="CHANGES: Emoji chars, Highscore, Welcome and end screen, color, fix start points." />
   </component>
 </project>
