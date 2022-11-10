@@ -51,10 +51,21 @@ public class Drawer {
     public void plotEndScreen(Human human) throws IOException, InterruptedException {
 
         t.clearScreen();
+        t.setForegroundColor(TextColor.ANSI.CYAN);
         do {
-            t.setCursorPosition(col / 2 - 10, row / 2 - 3);
-            t.putString("GAME OVER!");
-            t.setCursorPosition(col/ 2 - 10, col/ 2 - 2);
+
+            File testcase = new File(System.getProperty("user.dir")+
+                    "\\src\\main\\resources\\GameOver.txt");
+            Scanner in = new Scanner(testcase);
+
+            int row = 1;
+            while (in.hasNextLine()) {
+                t.setCursorPosition(20, row++);
+                t.putString(in.nextLine());
+                t.flush();
+            }
+            row=row+2;
+            t.setCursorPosition(col / 2 - 10, row++);
             t.putString("Your score: " + human.getScore());
             t.setCursorPosition(col / 2 - 10, row / 2 - 1);
             t.putString("Press escape to quit game: ");
@@ -62,9 +73,9 @@ public class Drawer {
 
             keyType = controller.getKeyTypeInput();
         } while (!keyType.equals(KeyType.Escape));
-
-
     }
+
+
     public void plotHuman(Human human) throws IOException {
 
         t.setCursorPosition(human.getY(), human.getX());
@@ -81,7 +92,8 @@ public class Drawer {
         }
 
     }
-    public void plotHighScore(Human human,HighScore score) throws IOException {
+
+    public void plotHighScore(Human human, HighScore score) throws IOException {
 
         t.setCursorPosition(0, 0);
         t.setForegroundColor(TextColor.ANSI.GREEN);
@@ -91,6 +103,7 @@ public class Drawer {
     public void flush() throws IOException {
         t.flush();
     }
+
     public void clearScreen() throws IOException {
         t.clearScreen();
     }
@@ -99,17 +112,18 @@ public class Drawer {
         clearScreen();
         plotHuman(human);
         plotZombie(zombie);
-        plotHighScore(human,highScore);
+        plotHighScore(human, highScore);
         flush();
 
     }
-    public int getCol(){
+
+    public int getCol() {
         return col;
     }
-    public int getRow(){
+
+    public int getRow() {
         return row;
     }
-
 
 
 }
