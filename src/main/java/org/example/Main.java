@@ -26,7 +26,6 @@ public class Main {
         int col= drawer.getCol();  //x rettning --
         int row = drawer.getRow(); //y rettning |
 
-        System.out.println(col +"  "+row);
         int start_x=Math.floorDiv(col,2);
         int start_y=Math.floorDiv(row,2);
 

@@ -47,7 +47,6 @@ public class Human {
                 x=maxX;
             }
 
-            System.out.printf("x: %d y: %d mx: %d my: %d \n",x,y,maxX,maxY);
 
 
         }
