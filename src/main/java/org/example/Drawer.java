@@ -85,7 +85,7 @@ public class Drawer {
         t.putString(human.getSymbol());
     }
 
-    public void plotZombie(Zombie... zombies) throws IOException {
+    public void plotZombie(List<Zombie> zombies) throws IOException {
 
         for (Zombie zombie : zombies) {
             t.setCursorPosition(zombie.getY(), zombie.getX());
@@ -110,10 +110,10 @@ public class Drawer {
         t.clearScreen();
     }
 
-    public void plotGameLoop(HighScore highScore, Human human, Zombie... zombie) throws IOException {
+    public void plotGameLoop(HighScore highScore, Human human, List<Zombie> zombies) throws IOException {
         clearScreen();
         plotHuman(human);
-        plotZombie(zombie);
+        plotZombie(zombies);
         plotHighScore(human, highScore);
         flush();
 

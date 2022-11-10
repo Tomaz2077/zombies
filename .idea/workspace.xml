@@ -6,7 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="10bff2da-c5d1-40a3-a400-69b15f58caf5" name="Changes" comment="final setup, :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HighScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HighScore.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Drawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Drawer.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Zombie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Zombie.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,18 +49,18 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/Tomaz/Documents",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Tomaz/Documents&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\daniel\IdeaProjects\zombies\src\main\resources" />
@@ -105,6 +107,7 @@
       <updated>1667898653442</updated>
       <workItem from="1667898655686" duration="2497000" />
       <workItem from="1667901874882" duration="39156000" />
+      <workItem from="1668086918839" duration="1921000" />
     </task>
     <task id="LOCAL−00001" summary="Initial">
       <created>1667915540790</created>
@@ -170,7 +173,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668082818465</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="final setup, :)">
+      <created>1668083947970</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1668083947970</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -213,9 +223,9 @@
     <MESSAGE value="Version 1. Randomous zombie" />
     <MESSAGE value="CHANGES: Emoji chars, Highscore, Welcome and end screen, color, fix start points." />
     <MESSAGE value="new class setup, :)" />
-    <MESSAGE value="final setup, :)" />
     <MESSAGE value="Changes by ArnarSmari" />
     <MESSAGE value="Changes by Tomaz" />
-    <option name="LAST_COMMIT_MESSAGE" value="Changes by Tomaz" />
+    <MESSAGE value="final setup, :)" />
+    <option name="LAST_COMMIT_MESSAGE" value="final setup, :)" />
   </component>
 </project>

@@ -9,7 +9,6 @@ public class Zombie {
 
     private int y;
 
-    private long color;
 
     private Human human;
     private final String symbol ="\uD83D\uDC80";
@@ -28,17 +27,13 @@ public class Zombie {
         return x;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
+
 
     public int getY() {
         return y;
     }
 
-    public void setY(int y) {
-        this.y = y;
-    }
+
 
     public void move() {
         int humanX = human.getX();

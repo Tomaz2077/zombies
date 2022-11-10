@@ -1,5 +1,6 @@
 package org.example;
 
+import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.terminal.Terminal;
@@ -8,12 +9,16 @@ import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Main {
 
     public static void main(String[] args) throws IOException, InterruptedException {
         DefaultTerminalFactory d = new DefaultTerminalFactory();
         Terminal terminal = d.createTerminal();
+        terminal.setCursorVisible(false);
+        
 
         Controller controller=new Controller(terminal);
         Drawer drawer=new Drawer(terminal);
@@ -24,6 +29,8 @@ public class Main {
 
         Human human = new Human(start_x, start_y);
         Zombie zombie= new Zombie(15, 15, human);
+        List<Zombie> zombies = new ArrayList<>();
+        zombies.add(zombie);
 
 
         Platform.startup(() -> {
@@ -32,7 +39,7 @@ public class Main {
             mediaPlayer.play();
         }); //adds music
         drawer.plotWelcomeScreen();
-        drawer.plotGameLoop(score,human,zombie);
+        drawer.plotGameLoop(score,human,zombies);
 
         //starts our main game loop, stops only when break'ed
         mainloop:
@@ -41,16 +48,24 @@ public class Main {
             KeyType kt = controller.getKeyTypeInput();
 
             human.move(kt);
-            zombie.move();
-
-            if (kt.equals(KeyType.Escape)) {
-                break mainloop;
+            for(Zombie zom : zombies){
+                zom.move();
             }
 
-            int winner = determineWinner(human,zombie);
+            if (kt.equals(KeyType.Escape)) {
+                break;
+            }
+
+            int winner = determineWinner(human,zombies);
             switch (winner) {
                 case 0:
-                    drawer.plotGameLoop(score,human,zombie);
+                    drawer.plotGameLoop(score,human,zombies);
+                    if ((human.getScore()%40==0) && (human.getScore()>1)){
+                        int c= (int) (Math.random()*drawer.getCol());
+                        int r= (int) (Math.random()*drawer.getRow());
+
+                        zombies.add(new Zombie(r,c,human));
+                    }
                     human.incrementScore();
                     break;
                 case 1:
@@ -71,10 +86,13 @@ public class Main {
 
     }
 
-    public static int determineWinner(Human human,Zombie zombie) {
-        if (zombie.getX() == human.getX() && zombie.getY() == human.getY()) {
-            return 2;
-        } else return 0;
+    public static int determineWinner(Human human,List<Zombie> zombies) {
+        for(Zombie zombie :zombies){
+            if (zombie.getX() == human.getX() && zombie.getY() == human.getY()) {
+                return 2;
+            }
+        }
+        return 0;
     }
 
 
