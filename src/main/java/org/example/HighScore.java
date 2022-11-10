@@ -17,6 +17,8 @@ public class HighScore {
 
 
     }
+
+    //loads highscore from highscore.txt
     public int loadHighScore(){
 
         File file;
@@ -41,6 +43,8 @@ public class HighScore {
 
 
     }
+
+    //saves highscore on highscore.txt
     public void save(){
 
         PrintStream p = null;
@@ -56,6 +60,7 @@ public class HighScore {
         System.out.print(highScore);
     }
 
+    //checks if its a highscore
     public void setHighScore(Human human){
         if(human.getScore()>highScore){
             highScore=human.getScore();
