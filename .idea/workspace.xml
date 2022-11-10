@@ -4,21 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="10bff2da-c5d1-40a3-a400-69b15f58caf5" name="Changes" comment="new class setup, :)">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/highscore.txt" afterDir="false" />
+    <list default="true" id="10bff2da-c5d1-40a3-a400-69b15f58caf5" name="Changes" comment="final setup, :)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Drawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Drawer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/org/example/HighScore.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/HighScore.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/highscore.txt" beforeDir="false" />
-    </list>
-    <list id="376945c5-9507-4d87-a39e-2fe3d8d131ac" name="Changes by ArnarSmari" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Drawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Drawer.java" afterDir="false" />
-    </list>
-    <list id="16ff84f9-3304-4e52-b30c-55fb7b820aae" name="Changes by Tomaz" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Drawer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Drawer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Human.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Human.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,52 +30,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/src/main/java/org/example/Drawer.java">
-      <ranges>
-        <range start1="7" end1="7" start2="7" end2="8" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="8" end1="8" start2="9" end2="11" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="31" end1="32" start2="34" end2="35" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="33" end1="34" start2="36" end2="37" changelist="16ff84f9-3304-4e52-b30c-55fb7b820aae" />
-        <range start1="35" end1="41" start2="38" end2="48" changelist="16ff84f9-3304-4e52-b30c-55fb7b820aae" />
-        <range start1="47" end1="48" start2="54" end2="55" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="50" end1="50" start2="57" end2="58" changelist="376945c5-9507-4d87-a39e-2fe3d8d131ac" />
-        <range start1="51" end1="54" start2="59" end2="72" changelist="376945c5-9507-4d87-a39e-2fe3d8d131ac" />
-        <range start1="55" end1="56" start2="73" end2="74" changelist="16ff84f9-3304-4e52-b30c-55fb7b820aae" />
-        <range start1="61" end1="61" start2="79" end2="80" changelist="376945c5-9507-4d87-a39e-2fe3d8d131ac" />
-        <range start1="63" end1="64" start2="82" end2="82" changelist="376945c5-9507-4d87-a39e-2fe3d8d131ac" />
-        <range start1="70" end1="71" start2="88" end2="88" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="72" end1="75" start2="89" end2="97" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="76" end1="77" start2="98" end2="100" changelist="376945c5-9507-4d87-a39e-2fe3d8d131ac" />
-        <range start1="86" end1="86" start2="109" end2="110" changelist="376945c5-9507-4d87-a39e-2fe3d8d131ac" />
-        <range start1="90" end1="91" start2="114" end2="115" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="94" end1="95" start2="118" end2="119" changelist="376945c5-9507-4d87-a39e-2fe3d8d131ac" />
-        <range start1="98" end1="99" start2="122" end2="124" changelist="376945c5-9507-4d87-a39e-2fe3d8d131ac" />
-        <range start1="101" end1="102" start2="126" end2="128" changelist="376945c5-9507-4d87-a39e-2fe3d8d131ac" />
-        <range start1="106" end1="107" start2="132" end2="132" changelist="376945c5-9507-4d87-a39e-2fe3d8d131ac" />
-      </ranges>
-    </file>
-    <file path="$PROJECT_DIR$/src/main/java/org/example/Main.java">
-      <ranges>
-        <range start1="2" end1="5" start2="2" end2="2" changelist="16ff84f9-3304-4e52-b30c-55fb7b820aae" />
-        <range start1="12" end1="14" start2="9" end2="9" changelist="16ff84f9-3304-4e52-b30c-55fb7b820aae" />
-        <range start1="15" end1="17" start2="10" end2="10" changelist="16ff84f9-3304-4e52-b30c-55fb7b820aae" />
-        <range start1="20" end1="45" start2="13" end2="13" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="48" end1="49" start2="16" end2="17" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="53" end1="55" start2="21" end2="23" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="57" end1="58" start2="25" end2="26" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="59" end1="60" start2="27" end2="27" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="61" end1="62" start2="28" end2="28" changelist="16ff84f9-3304-4e52-b30c-55fb7b820aae" />
-        <range start1="66" end1="70" start2="32" end2="35" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="87" end1="88" start2="52" end2="53" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="92" end1="93" start2="57" end2="58" changelist="16ff84f9-3304-4e52-b30c-55fb7b820aae" />
-        <range start1="96" end1="98" start2="61" end2="61" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="99" end1="100" start2="62" end2="63" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="114" end1="115" start2="77" end2="77" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-        <range start1="118" end1="210" start2="80" end2="80" changelist="10bff2da-c5d1-40a3-a400-69b15f58caf5" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -207,7 +149,28 @@
       <option name="project" value="LOCAL" />
       <updated>1668074055686</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="final setup, :)">
+      <created>1668082809724</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1668082809724</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Changes by ArnarSmari">
+      <created>1668082814578</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1668082814578</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Changes by Tomaz">
+      <created>1668082818465</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1668082818465</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,9 +211,11 @@
     <MESSAGE value="Initial" />
     <MESSAGE value="Changes by daniel" />
     <MESSAGE value="Version 1. Randomous zombie" />
-    <MESSAGE value="Changes by ArnarSmari" />
     <MESSAGE value="CHANGES: Emoji chars, Highscore, Welcome and end screen, color, fix start points." />
     <MESSAGE value="new class setup, :)" />
-    <option name="LAST_COMMIT_MESSAGE" value="new class setup, :)" />
+    <MESSAGE value="final setup, :)" />
+    <MESSAGE value="Changes by ArnarSmari" />
+    <MESSAGE value="Changes by Tomaz" />
+    <option name="LAST_COMMIT_MESSAGE" value="Changes by Tomaz" />
   </component>
 </project>

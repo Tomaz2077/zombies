@@ -36,8 +36,7 @@ public class Drawer {
         t.clearScreen();
         t.setForegroundColor(TextColor.ANSI.GREEN_BRIGHT);
         do {
-            File testcase = new File(System.getProperty("user.dir") +
-                    "\\src\\main\\resources\\ZombieWelcome.txt");
+            File testcase = new File(Main.class.getResource("/ZombieWelcome.txt").getPath());
             Scanner in = new Scanner(testcase);
 
             int row = 1;
@@ -58,8 +57,7 @@ public class Drawer {
         t.setForegroundColor(TextColor.ANSI.CYAN);
         do {
 
-            File testcase = new File(System.getProperty("user.dir")+
-                    "\\src\\main\\resources\\GameOver.txt");
+            File testcase = new File(Main.class.getResource("/GameOver.txt").getPath());
             Scanner in = new Scanner(testcase);
 
             int row = 1;

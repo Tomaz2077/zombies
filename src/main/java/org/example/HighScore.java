@@ -11,8 +11,10 @@ public class HighScore {
     String path;
 
     public HighScore(){
-        this.path=System.getProperty("user.dir")+"\\"+"src\\main\\resources\\highscore.txt";
+        this.path= Main.class.getResource("/highscore.txt").getPath();
+        //this.path=System.getProperty("user.dir")+"\\"+"src\\main\\resources\\highscore.txt";
         this.highScore=loadHighScore();
+
 
     }
     public int loadHighScore(){
