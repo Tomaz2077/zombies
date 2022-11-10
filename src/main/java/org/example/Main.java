@@ -1,8 +1,5 @@
 package org.example;
 
-import com.googlecode.lanterna.TerminalSize;
-import com.googlecode.lanterna.TextColor;
-import com.googlecode.lanterna.input.KeyStroke;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.terminal.DefaultTerminalFactory;
 import com.googlecode.lanterna.terminal.Terminal;
@@ -10,11 +7,7 @@ import javafx.application.Platform;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.io.IOException;
-import java.io.PrintStream;
-import java.util.Scanner;
 
 public class Main {
 
@@ -33,7 +26,6 @@ public class Main {
         Zombie zombie= new Zombie(15, 15, human);
 
 
-        //plotWelcomeScreen();
         Platform.startup(() -> {
             Media media = new Media(Main.class.getResource("/ZombieNights.mp3").toExternalForm());
             MediaPlayer mediaPlayer = new MediaPlayer(media);
@@ -63,7 +55,7 @@ public class Main {
                     break;
                 case 1:
                     System.out.println("Human wins!");
-                    //human wins
+                    //human never wins
                     break mainloop;
                 case 2:
                     score.setHighScore(human);

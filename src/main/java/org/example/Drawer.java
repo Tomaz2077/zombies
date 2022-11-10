@@ -34,14 +34,18 @@ public class Drawer {
 
     public void plotWelcomeScreen() throws IOException, InterruptedException {
         t.clearScreen();
-        t.setForegroundColor(TextColor.ANSI.MAGENTA_BRIGHT);
+        t.setForegroundColor(TextColor.ANSI.GREEN_BRIGHT);
         do {
-            t.setCursorPosition(x, y);
-            t.putString("Press enter to start");
-            t.setCursorPosition(col / 2 -10, row / 2);
-            t.putString("Welcome to Zombies");
-            t.flush();
+            File testcase = new File(System.getProperty("user.dir") +
+                    "\\src\\main\\resources\\ZombieWelcome.txt");
+            Scanner in = new Scanner(testcase);
 
+            int row = 1;
+            while (in.hasNextLine()) {
+                t.setCursorPosition(1, row++);
+                t.putString(in.nextLine());
+                t.flush();
+            }
             keyType = controller.getKeyTypeInput();
         } while (!keyType.equals(KeyType.Enter));
 
@@ -67,7 +71,7 @@ public class Drawer {
             row=row+2;
             t.setCursorPosition(col / 2 - 10, row++);
             t.putString("Your score: " + human.getScore());
-            t.setCursorPosition(col / 2 - 10, row / 2 - 1);
+            t.setCursorPosition(col / 2 - 10, row++);
             t.putString("Press escape to quit game: ");
             t.flush();
 

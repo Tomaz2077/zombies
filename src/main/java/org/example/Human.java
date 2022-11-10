@@ -17,11 +17,7 @@ public class Human {
         this.score = 0;
     }
 
-
         public void move (KeyType keyType){
-//        if(keyType==null){
-//            return;
-//        }
 
             if (keyType.equals(KeyType.ArrowUp)) {
                 x--;
@@ -35,7 +31,6 @@ public class Human {
             if (keyType.equals(KeyType.ArrowRight)) {
                 y++;
             }
-
         }
 
         public int getX () {
