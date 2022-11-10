@@ -8,9 +8,12 @@ import java.util.Scanner;
 public class HighScore {
     private int highScore;
     private boolean newHighScore=false;
+    String path;
 
     public HighScore(){
+        this.path=System.getProperty("user.dir")+"\\"+"src\\main\\resources\\highscore.txt";
         this.highScore=loadHighScore();
+
     }
     public int loadHighScore(){
 
@@ -18,9 +21,9 @@ public class HighScore {
         Scanner sc;
 
         try {
-            file = new File("src/main/java/org/example/highscore.txt");
+            file = new File(path);
             sc = new Scanner(file);
-        } catch (FileNotFoundException e) {
+        } catch (Exception e) {
             throw new RuntimeException(e);
         }
         int loadedHighScore=0;
@@ -40,7 +43,9 @@ public class HighScore {
 
         PrintStream p = null;
         try {
-            p = new PrintStream(new File("src/main/java/org/example/highscore.txt"));
+            File file = new File(path);
+
+            p = new PrintStream(file);
         } catch (FileNotFoundException e) {
             System.err.println("File not found!");
         }

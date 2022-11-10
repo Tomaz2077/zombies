@@ -5,7 +5,10 @@ import com.googlecode.lanterna.TextColor;
 import com.googlecode.lanterna.input.KeyType;
 import com.googlecode.lanterna.terminal.Terminal;
 
+import java.io.File;
 import java.io.IOException;
+import java.util.List;
+import java.util.Scanner;
 
 public class Drawer {
 
@@ -29,7 +32,7 @@ public class Drawer {
     }
 
 
-    public void plotWelcomeScreen(int x, int y) throws IOException, InterruptedException {
+    public void plotWelcomeScreen() throws IOException, InterruptedException {
         t.clearScreen();
         t.setForegroundColor(TextColor.ANSI.MAGENTA_BRIGHT);
         do {
@@ -45,7 +48,7 @@ public class Drawer {
 
     }
 
-    public void plotEndScreen(Human human, int x, int y) throws IOException, InterruptedException {
+    public void plotEndScreen(Human human) throws IOException, InterruptedException {
 
         t.clearScreen();
         do {
@@ -68,11 +71,15 @@ public class Drawer {
         t.setForegroundColor(human.getTextColor());
         t.putString(human.getSymbol());
     }
-    public void plotZombie(Zombie zombie) throws IOException {
 
-        t.setCursorPosition(zombie.getY(), zombie.getX());
-        t.setForegroundColor(zombie.getTextColor());
-        t.putString(zombie.getSymbol());
+    public void plotZombie(Zombie... zombies) throws IOException {
+
+        for (Zombie zombie : zombies) {
+            t.setCursorPosition(zombie.getY(), zombie.getX());
+            t.setForegroundColor(zombie.getTextColor());
+            t.putString(zombie.getSymbol());
+        }
+
     }
     public void plotHighScore(Human human,HighScore score) throws IOException {
 
@@ -88,7 +95,7 @@ public class Drawer {
         t.clearScreen();
     }
 
-    public void plotGameLoop(Human human,Zombie zombie,HighScore highScore) throws IOException {
+    public void plotGameLoop(HighScore highScore, Human human, Zombie... zombie) throws IOException {
         clearScreen();
         plotHuman(human);
         plotZombie(zombie);
