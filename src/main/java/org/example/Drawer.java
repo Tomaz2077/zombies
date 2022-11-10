@@ -80,7 +80,7 @@ public class Drawer {
 
     public void plotHuman(Human human) throws IOException {
 
-        t.setCursorPosition(human.getY(), human.getX());
+        t.setCursorPosition(human.getX(), human.getY());
         t.setForegroundColor(human.getTextColor());
         t.putString(human.getSymbol());
     }
@@ -88,7 +88,7 @@ public class Drawer {
     public void plotZombie(List<Zombie> zombies) throws IOException {
 
         for (Zombie zombie : zombies) {
-            t.setCursorPosition(zombie.getY(), zombie.getX());
+            t.setCursorPosition(zombie.getX(), zombie.getY());
             t.setForegroundColor(zombie.getTextColor());
             t.putString(zombie.getSymbol());
         }

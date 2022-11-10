@@ -18,16 +18,19 @@ public class Main {
         DefaultTerminalFactory d = new DefaultTerminalFactory();
         Terminal terminal = d.createTerminal();
         terminal.setCursorVisible(false);
-        
+
 
         Controller controller=new Controller(terminal);
         Drawer drawer=new Drawer(terminal);
         HighScore score=new HighScore();
+        int col= drawer.getCol();  //x rettning --
+        int row = drawer.getRow(); //y rettning |
 
-        int start_y=Math.floorDiv(drawer.getCol(),2);
-        int start_x=Math.floorDiv(drawer.getRow(),2);
+        System.out.println(col +"  "+row);
+        int start_x=Math.floorDiv(col,2);
+        int start_y=Math.floorDiv(row,2);
 
-        Human human = new Human(start_x, start_y);
+        Human human = new Human(start_x, start_y,col,row);
         Zombie zombie= new Zombie(15, 15, human);
         List<Zombie> zombies = new ArrayList<>();
         zombies.add(zombie);
